@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { HttpClient } from 'selenium-webdriver/http';
+import { AlunoService, Apresentacao, Aluno } from '../AlunoService';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-lista-aluno',
@@ -9,11 +10,12 @@ import { HttpClient } from 'selenium-webdriver/http';
 })
 export class ListaAlunoComponent implements OnInit {
 
-  candidatos: any[] = [];
+  alunos: any[] = [];
 
   constructor(private cands: AlunoService, 
     private meuRouter: Router,
-    private http:HttpClient) { }
+    private http: HttpClient,
+   ) { }
 
   ngOnInit() {
     
@@ -21,15 +23,21 @@ export class ListaAlunoComponent implements OnInit {
 
   cardClick(valor){
     
-    alert('clicou em: '+ valor.nome);
+    alert('clicou em: '+ valor.aluno);
   }
 
-  
   
 
   navegar(){
   this.meuRouter.navigate(['/aluno/cadastro']);
   }
 
+  excluir(){
+    this.alunos.splice( , 1);
+    localStorage.setItem("lista-alunos", JSON.stringify(this.alunos));
+    alert("aluno excluído.");
+  }
+
 }
+
 

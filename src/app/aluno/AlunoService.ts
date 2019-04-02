@@ -12,21 +12,21 @@ export class AlunoService {
   
     }
   
-    getLista(): lista[]{
+    getLista(): any[]{
       return this._lista;
     }
   
-    getUmaLista(index): lista{
+    getUmaLista(index): any{
      return this._lista[index]
     }
   
-    addAluno(candidato: lista): void{
-     this._lista.push(candidato)
+    addAluno(aluno: any): void{
+     this._lista.push(Apresentacao)
      this.saveLocal();
     }
   
-    saveAluno(candidato: lista, index: number){
-      this._lista[index] = candidato;
+    saveAluno(candidato: any, index: number){
+      this._lista[index] = Apresentacao;
       this.saveLocal();
     }
   
@@ -34,19 +34,48 @@ export class AlunoService {
       localStorage.setItem('lista-alunos', JSON.stringify(this._lista));
     }
   }
-  
-  export class lista{
-  
-    nome: string;
+
+
+  export class Apresentacao{
+
+    aluno: string;
     colegio: string;
     imagem: string;
+
+     constructor(_aluno:string, _colegio:string, _imagem: string) {
+       this.aluno = _aluno;
+       this.colegio = _colegio;
+       this.imagem = _imagem;
+    
+     }
+    
+  }
+  
+  export class Pai {
+  
+    nome: string;
+    endereco: string;
+    celular: string;
+    telefone: string;
     
   
-    constructor(_nome:string, _colegio:string) {
-      this.nome = _nome;
-      this.colegio = _colegio;
     
-    }
+    
+  }
+
+  export class Aluno  {
+ 
+        tipo_sanguineo: string;
+        alergia: string;
+
+  }
+
+  export class Colegio{
+
+        serie: string;
+        horario: string;
+        telefone_colegio: string;
+        endereco_colegio: string;
   }
   
     

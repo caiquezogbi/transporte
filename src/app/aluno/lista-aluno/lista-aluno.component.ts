@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+
 import { Router } from '@angular/router';
-import { AlunoService, Apresentacao, Aluno } from '../AlunoService';
+import { AlunoService, Apresentacao, Aluno, Colegio } from '../AlunoService';
 import { HttpClient } from '@angular/common/http';
 import { $ } from 'protractor';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-lista-aluno',
@@ -13,13 +14,23 @@ export class ListaAlunoComponent implements OnInit {
 
   alunos: any[] = [];
 
-  constructor(private cands: AlunoService, 
+
+  @Input() nome_aluno: string;
+  @Input() Colegio: string;
+ 
+    
+    @Output() result: EventEmitter<any> = new EventEmitter();
+
+  
+
+  constructor(
+    private cands: AlunoService, 
     private meuRouter: Router,
-    private http: HttpClient,
+    //private http: HttpClient,
    ) { }
 
   ngOnInit() {
-    
+   
   }
 
   cardClick(valor){
@@ -31,6 +42,12 @@ export class ListaAlunoComponent implements OnInit {
 
   navegar(){
   this.meuRouter.navigate(['/aluno/cadastro']);
+  }
+
+  meClicou() {
+    this.result.emit({
+      nome_aluno: this.nome_aluno
+    });
   }
 
 //   excluir(_temp,indice){

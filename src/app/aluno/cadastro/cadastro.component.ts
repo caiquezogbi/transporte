@@ -9,7 +9,15 @@ import { Location } from '@angular/common';
 })
 export class CadastroComponent implements OnInit {
 
-  constructor(private Local: Location, private aluno:AlunoService) { }
+  alunos: any = {};
+  aluno: AlunoService;
+
+
+  constructor(private Local: Location, _aluno:AlunoService) {
+    this.aluno._aluno;
+   }
+
+
 
   ngOnInit() {}
 
@@ -20,7 +28,7 @@ export class CadastroComponent implements OnInit {
     let _telefone= meuForm.value.telefone;
 
 
-    let _aluno = meuForm.value.aluno;
+    let _nome_aluno = meuForm.value.nome_aluno;
     let _tipo_sanguineo = meuForm.value.tipo_sanguineo;             //cadastro do filho/filha
     let _alergia = meuForm.value.alergia;
 
@@ -32,7 +40,7 @@ export class CadastroComponent implements OnInit {
     let _endereco_colegio = meuForm.value.endereco_colegio;
 
 
-    if(_nome &&_endereco &&_celular &&_telefone &&_aluno &&_tipo_sanguineo &&_alergia &&_colegio &&_serie &&_horario &&_telefone_colegio &&_endereco_colegio){
+    if(_nome &&_endereco &&_celular &&_telefone &&_nome_aluno &&_tipo_sanguineo &&_alergia &&_colegio &&_serie &&_horario &&_telefone_colegio &&_endereco_colegio){
 
       this.aluno.addAluno({
         nome: _nome, 
@@ -40,7 +48,7 @@ export class CadastroComponent implements OnInit {
         celular: _celular,
         telefone: _telefone,
 
-        aluno: _aluno,
+        nome_aluno: _nome_aluno,
         tipo_sanguineo: _tipo_sanguineo,
         alergia: _alergia,
 

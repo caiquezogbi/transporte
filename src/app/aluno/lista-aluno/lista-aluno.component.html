@@ -1,7 +1,36 @@
-<app-layout>
-    <div class="lista" *ngIf="lista-aluno.length > 0">
+<html>
+<head>
+<title> Transeguro </title>
+<link type="text/css" rel="stylesheet" href="style-lista.css">
 
-<app-card *ngFor="let lista-aluno of alunos" 
-[nome]="lista-aluno.nome.first" [colegio]="lista-aluno.location.colegio" [imagem]="lista-aluno.picture.medium" ></app-card>
+</head>
+	<body>
+		<div class="container">
+			<header class="topo">
+				<img src="https://uploaddeimagens.com.br/images/002/003/295/original/logo2.png?1554058037" width="100px" height="100px" alt="Logo do Transeguro">
+				
+			</header>
+				<div >
+					<button class="btn-cadastrar" routerLink="/lista-aluno/cadastro">cadastrar</button>
+				</div>
+				
+			<div class="titulo"> Alunos cadastrados </div><hr>
+			
+			<div class="conteudo" *ngIf="Apresentacao.length > 0">
+				
+				<div class="box">
 
-</div>
+					<div *ngFor="let Apresentacao of lista-alunos"
+
+					 [nome_aluno]="Apresentacao.nome_aluno" 
+                     [colegio]="Apresentacao.colegio"
+				     [imagem]="candidato.imagem"></div>
+						
+				</div>
+				
+				
+
+			</div>
+		</div>
+	</body>
+</html>

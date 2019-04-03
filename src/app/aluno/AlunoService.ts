@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'         
 })
 export class AlunoService {
+  [x: string]: any;
 
     private _lista: any [] = [];
   
@@ -40,12 +41,12 @@ export class AlunoService {
 
   export class Apresentacao{
 
-    aluno: string;
+    nome_aluno: string;
     colegio: string;
-    imagem: string;
+    imagem?: string;
 
-     constructor(_aluno:string, _colegio:string, _imagem: string) {
-       this.aluno = _aluno;
+     constructor(_nome_aluno:string, _colegio:string, _imagem: string) {
+       this.nome_aluno = _nome_aluno;
        this.colegio = _colegio;
        this.imagem = _imagem;
     
@@ -58,7 +59,7 @@ export class AlunoService {
     nome: string;
     endereco: string;
     celular: string;
-    telefone: string;
+    telefone?: string;
     
   
     
@@ -67,7 +68,7 @@ export class AlunoService {
 
   export class Aluno  {
  
-        tipo_sanguineo: string;
+        tipo_sanguineo?: string;
         alergia: string;
 
   }
@@ -76,8 +77,8 @@ export class AlunoService {
 
         serie: string;
         horario: string;
-        telefone_colegio: string;
-        endereco_colegio: string;
+        telefone_colegio?: string;
+        endereco_colegio?: string;
   }
   
     

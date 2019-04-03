@@ -6,7 +6,12 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { ListaAlunoComponent } from './lista-aluno/lista-aluno.component';
 
 @NgModule({
-  declarations: [CadastroComponent, ListaAlunoComponent ],
+  declarations: [
+    CadastroComponent, 
+    ListaAlunoComponent ],
+
+
+
   imports: [
     CommonModule,
     AlunoRoutingModule,

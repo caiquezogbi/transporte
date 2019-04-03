@@ -5,7 +5,7 @@ import { ListaAlunoComponent } from './lista-aluno/lista-aluno.component';
 
 const routes: Routes = [
   {path: '', component: ListaAlunoComponent}, 
-  {path: ' ', component: null},
+  //{path: ' ', component: null},
   {path: 'cadastro', component: CadastroComponent},
 ];
 

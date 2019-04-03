@@ -1,12 +1,60 @@
-lista{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    min-height: 40%;
-
-    app-card {
-        margin: .3em;
-    }
-
+* { box-sizing: border-box;
+	font-family: 'Noto Sans JP', sans-serif;
 }
+
+.topo{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50px;
+  background-color: rgb(255, 215, 0);
+  border-radius: 8px;
+  min-height: 40px;
+}
+
+.titulo{
+  color: #000;
+  font-weight: bold;
+  font-size: 110%;
+}
+
+
+.container{
+  background-color: #FFF;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: 5%;
+  padding: 10px 20px;
+}
+
+.box {
+  display: flex;
+  background-color: #f1f1f1;
+  margin: 20px;
+  flex-direction: column;
+  flex-wrap: noweap;
+  border-radius: 8px;
+  padding: .6em;
+  justify-content: center;
+}
+
+.conteudo{
+  margin: 0 10px 10px;
+  display: flex;
+  justify-content: center;
+}
+.btn-cadastrar{
+	border-radius: 5px;
+	background-color: rgb(255, 215, 0);
+	cursor: pointer;
+	margin: 10px 68%;
+	font-weight: bold;
+	font-size: 80%;
+	border: 0; 
+	height: 50px;
+	width: 100px;
+	box-shadow: 3px 3px 0 #999;
+	display: flex;
+	justify-content: center;
+	cursor: pointer;
+}	

@@ -1,0 +1,7 @@
+<app-layout>
+    <div class="lista" *ngIf="lista-aluno.length > 0">
+
+<app-card *ngFor="let lista-aluno of alunos" 
+[nome]="lista-aluno.nome.first" [colegio]="lista-aluno.location.colegio" [imagem]="lista-aluno.picture.medium" ></app-card>
+
+</div>

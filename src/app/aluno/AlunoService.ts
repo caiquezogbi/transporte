@@ -7,6 +7,8 @@ export class AlunoService {
     private _lista: any [] = [];
   
     constructor() { 
+     
+      let indice = -1;
       const _temp = localStorage.getItem('lista-alunos');
       this._lista = _temp ? JSON.parse(_temp) : [];
   

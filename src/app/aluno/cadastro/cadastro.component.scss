@@ -1,0 +1,86 @@
+* { box-sizing: border-box;
+	font-family: 'Noto Sans JP', sans-serif;
+}
+
+.container{
+  background-color: #FFF;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: 0 10%;
+  padding: 10px 20px;
+}
+
+.topo{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50px;
+  background-color: rgb(255, 215, 0);
+  border-radius: 8px;
+}
+
+
+.input-total{
+  width: 60%;
+  padding: 10px 20px;
+  margin: 7px 0;
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+	
+}
+input{
+  width: 30%;
+  padding: 10px 20px;
+  margin: 7px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  display: block;
+}
+
+.inputx{
+  width: 30%;
+  padding: 10px 20px;
+  margin: 7px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  display: block;
+}
+
+  
+ .lado-lado{
+  display: flex;
+ }
+
+ 
+.conteudo{
+
+	border: dashed gray;
+	display: flex;
+	flex-direction: column;
+}
+
+.btn-login{
+	border-radius: 5px;
+	background-color: rgb(255, 215, 0);
+	cursor: pointer;
+	margin: 8px 20px;
+	font-weight: bold;
+	font-size: 80%;
+	border: 0; 
+	height: 40px;
+	width: 100px;
+	box-shadow: 3px 3px 0 #999;	
+}
+footer{
+	border: dashed gray;
+}
+
+.btn-cancelar{
+	background-color: #b51630;
+
+}
+

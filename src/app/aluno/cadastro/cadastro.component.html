@@ -1,0 +1,72 @@
+
+	<app-layout class="container">
+
+		<header class="topo titulo">
+			<img src="https://uploaddeimagens.com.br/images/002/003/295/original/logo2.png?1554058037" width="100px" height="100px" alt="Logo do Transeguro">
+		</header>
+		<div class="">
+			<form  #cadForm="ngForm" (ngSubmit)= "cadastrar(cadForm)">
+				<div >
+							<h2>Cadastro</h2> <hr>
+
+                            <h3>Informações do Responsável</h3>   <!--relativo ao responsável -->
+                            
+							<label for="nome">Nome completo</label>
+							<input type="text" placeholder="Nome do Responsável" name="nome" id="nome" [(ngModel)]= "pai.nome" >
+						
+							<label for="Endereco">Endereço</label>
+							<input type="text" placeholder="Endereço residencial" name="endereco" id ="endereco" [(ngModel)]= "Pai.endereco" >
+							
+							<label for="Celular">Celular</label>
+							<input type="text" placeholder="Celular" name="celular" id="celular" [(ngModel)]= "Pai.celular" >
+							
+							<label for="Telefone">Telefone</label>
+							<input type="text" placeholder="Telefone" name="telefone" id="telefone" [(ngModel)]= "pai.telefone" >
+							
+					
+							
+							
+							<h3>Informações do Estudante</h3>	<!--relativo ao estudante -->
+							<label  for="aluno">Nome Completo</label>
+							<input type="text" placeholder="Nome do estudante completo" name="aluno" id="aluno" [(ngModel)]= "Apresentacao.aluno" >
+						
+							
+							<label for="tipo_sanguineo">Tipo Sanguíneo</label>
+							<input type="text" placeholder="Tipo sanguíneo" name="tipo_sanguineo" id="tipo_sanguineo" [(ngModel)]= "Aluno.tipo_sanguineo" >
+							
+							<label for="alergia">Alergias</label>
+							<input type="text" placeholder="Alergias" name="alergia" id="alergia" [(ngModel)]= "Aluno.alergia" >
+					
+
+					
+					<h3>Informações da Instituição</h3>   <!--relativo a instituição -->
+					<label for="colegio">Nome da Instituição</label>
+					<input type="text" placeholder="Nome completo da Instituição" name="colegio" id="colegio" [(ngModel)]= "Apresentacao.colegio" >
+					
+
+							<label for="serie">Série</label>
+							<input  type="text" placeholder="Série" name="serie" id="serie" [(ngModel)]= "Colegio.serie" >
+						
+							<label for="horario">Horário de entrada e saida</label>
+							<input  type="text" placeholder="Horário de entrada e saida" name="horario" id="horario" [(ngModel)]= "Colegio.horario" >
+							
+							
+					
+					<label for="telefone_colegio">Telefone</label>
+					<input type="text" placeholder="Telefone da Instituição" name="telefone_colegio" id="telefone_colegio" [(ngModel)]= "Colegio.telefone_colegio" >
+					
+					<label for="endereco_colegio">Endereço</label>
+					<input type="text" placeholder="Endereço da Instituição" name="endereco_colegio" id="endereco_colegio" [(ngModel)]= "Colegio.endereco_colegio" >
+					
+					 
+					
+
+					<footer>
+            <ion-buttom class="btn-login btn-cancelar" type ="button" (click)="voltar()">Cancelar</ion-buttom>
+					  <!-- <button class="btn-login btn-cancelar" type="button" class="cancelar">Cancelar</button> -->
+					  <button class="btn-login" type="submit">Salvar</button>
+					</footer>
+			  
+			</form>
+		</div>
+	</app-layout>

@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { AlunoRoutingModule } from './aluno-routing.module';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { ListaAlunoComponent } from './lista-aluno/lista-aluno.component';
+import { FormsModule } from '@angular/forms';
+import { GeralModule } from '../geral/geral.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,8 @@ import { ListaAlunoComponent } from './lista-aluno/lista-aluno.component';
   imports: [
     CommonModule,
     AlunoRoutingModule,
-    
+    FormsModule,
+    GeralModule    
   ]
 })
 export class AlunoModule { }

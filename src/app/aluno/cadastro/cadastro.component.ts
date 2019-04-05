@@ -9,17 +9,61 @@ import { Location } from '@angular/common';
 })
 export class CadastroComponent implements OnInit {
 
-  alunos: any = {};
-  aluno: AlunoService;
-
-
-  constructor(private Local: Location, _aluno:AlunoService) {
-    this.aluno._aluno;
-   }
+  // alunos: any = {};
+  // aluno: AlunoService;
 
 
 
-  ngOnInit() {}
+
+  aluno: any = {};
+
+  constructor(private Local: Location, private _aluno: AlunoService) {
+    //this.aluno._aluno;
+  }
+
+
+
+  ngOnInit() {this.aluno =[];}
+
+
+  // adicionar(meuForm) {
+  //   console.log(meuForm.value.nome);
+  //   console.log(meuForm.value.endereco);
+  //   console.log(meuForm.value.celular);
+  //   console.log(meuForm.value.telefone);
+
+  //   console.log(meuForm.value.nome_aluno);
+  //   console.log(meuForm.value.tipo_sanguineo);
+  //   console.log(meuForm.value.alergia);
+
+
+  //   console.log(meuForm.value.colegio);
+  //   console.log(meuForm.value.serie);
+  //   console.log(meuForm.value.horario);
+  //   console.log(meuForm.value.telefone_colegio);
+  //   console.log(meuForm.value.endereco_colegio);
+
+
+  //   let info = new this.aluno(
+  //     meuForm.value.nome,
+  //     meuForm.value.endereco,
+  //     meuForm.value.celular,
+  //     meuForm.value.telefone,
+
+  //     meuForm.value.nome_aluno,
+  //     meuForm.value.tipo_sanguineo,
+  //     meuForm.value.alergia,
+
+
+  //     meuForm.value.colegio,
+  //     meuForm.value.serie,
+  //     meuForm.value.horario,
+  //     meuForm.value.telefone_colegio,
+  //     meuForm.value.endereco_colegio);
+
+  //   this._aluno.addAluno(info);
+
+  // }
 
   cadastrar(meuForm){
     let _nome = meuForm.value.nome;
@@ -65,10 +109,10 @@ export class CadastroComponent implements OnInit {
     } else{
       alert('voce deve digitar em todos os campos obrigatorios')
     }
-    
+
   }
 
-  voltar(){
+  voltar() {
     this.Local.back();
   }
 

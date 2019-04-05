@@ -8,9 +8,9 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class CardComponent implements OnInit {
 
-  @Input() nome: string;
-  @Input() setor: string;
-  @Input() imagem: string;
+  @Input() nome_aluno: string;
+  @Input() colegio: string;
+  // @Input() imagem: string;
   @Output() result: EventEmitter <any> = new EventEmitter();
 
   constructor() { }
@@ -19,8 +19,7 @@ export class CardComponent implements OnInit {
 
   meClicou(){
     this.result.emit({
-      nome:this.nome
-    });
+      nome_aluno:this.nome_aluno    });
   }
 
 }

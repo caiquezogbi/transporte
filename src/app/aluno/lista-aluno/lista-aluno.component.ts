@@ -38,7 +38,9 @@ export class ListaAlunoComponent implements OnInit {
     alert('clicou em: '+ valor.aluno);
   }
 
-  
+  Listar(){
+    this.alunos = this.cands.getLista();
+  }
 
   navegar(){
   this.meuRouter.navigate(['/aluno/cadastro']);

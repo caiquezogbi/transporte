@@ -46,15 +46,16 @@
 .btn-cadastrar{
 	border-radius: 5px;
 	background-color: rgb(255, 215, 0);
-	cursor: pointer;
-	margin: 10px 68%;
+	color: #000;
+	margin: 1em auto ;
 	font-weight: bold;
 	font-size: 80%;
 	border: 0; 
 	height: 50px;
 	width: 100px;
-	box-shadow: 3px 3px 0 #999;
+	box-shadow: 3px 3px 0 #000;
 	display: flex;
 	justify-content: center;
-	cursor: pointer;
+  cursor: pointer;
+  align-items: center;
 }	

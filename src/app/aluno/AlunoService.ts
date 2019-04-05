@@ -23,12 +23,13 @@ export class AlunoService {
      return this._lista[index]
     }
   
-    addAluno(aluno: any): void{
-     this._lista.push(Apresentacao)
+    addAluno(apresentacao: Apresentacao,pai:Pai,aluno:Aluno,colegio:Colegio){
+     this._lista.push(apresentacao,pai,aluno,colegio)
      this.saveLocal();
     }
+    addPai(){}
   
-    saveAluno(candidato: any, index: number){
+    saveAluno(Apresentacao: any, index: number){
       this._lista[index] = Apresentacao;
       this.saveLocal();
     }
@@ -61,7 +62,13 @@ export class AlunoService {
     celular: string;
     telefone?: string;
     
-  
+  constructor(_nome:string, _endereco:string, _celular:string,_telefone:string){
+    this.nome = _nome;
+    this.endereco = _endereco;
+    this.celular = _celular;
+    this.telefone = _telefone;
+
+  }
     
     
   }
@@ -71,6 +78,13 @@ export class AlunoService {
         tipo_sanguineo?: string;
         alergia: string;
 
+        constructor(_tipo_sanguineo:string, _alergia:string){
+          this.tipo_sanguineo = _tipo_sanguineo;
+          this.alergia = _tipo_sanguineo;
+      
+        }
+          
+
   }
 
   export class Colegio{
@@ -79,6 +93,14 @@ export class AlunoService {
         horario: string;
         telefone_colegio?: string;
         endereco_colegio?: string;
+
+        constructor(_serie:string, _horario:string, _telefone_colegio:string,_endereco_colegio:string){
+          this.serie = _serie;
+          this.horario = _horario;
+          this.telefone_colegio = _telefone_colegio;
+          this.endereco_colegio = _endereco_colegio;
+      
+        }
   }
   
     
